@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.brand.label}}
+        {{form.brand}}
+        {% if form.brand.errors %}
+            {% for error in form.brand.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.model.label}}
+        {{form.model}}
+        {% if form.model.errors %}
+            {% for error in form.model.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.hp.label}}
+        {{form.hp}}
+        {% if form.hp.errors %}
+            {% for error in form.hp.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.volume.label}}
+        {{form.volume}}
+        {% if form.volume.errors %}
+            {% for error in form.volume.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.cylinders.label}}
+        {{form.cylinders}}
+        {% if form.cylinders.errors %}
+            {% for error in form.cylinders.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.fuel_type.label}}
+        {{form.fuel_type}}
+        {% if form.fuel_type.errors %}
+            {% for error in form.fuel_type.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.transmission_type.label}}
+        {{form.transmission_type}}
+        {% if form.transmission_type.errors %}
+            {% for error in form.transmission_type.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.milage.label}}
+        {{form.milage}}
+        {% if form.milage.errors %}
+            {% for error in form.milage.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.model_year.label}}
+        {{form.model_year}}
+        {% if form.model_year.errors %}
+            {% for error in form.model_year.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.gears.label}}
+        {{form.gears}}
+        {% if form.gears.errors %}
+            {% for error in form.gears.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.accident.label}}
+        {{form.accident}}
+        {% if form.accident.errors %}
+            {% for error in form.accident.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{form.submit()}}</div>
+    <br>
+    <div>
+        {{output}}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+
+{% endblock content %}
